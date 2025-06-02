@@ -1,9 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('Git hub') {
-        steps {
-            echo "Hello world"
+        stage('build') {
+	  agent {
+	    docker
+	    	  {
+		  image "Node:apline"
+		  reuseNode true
+		 }
+	      } 
+		 
+          steps {
+            	  sh ''' 
+			ls -la
+			node --version
+			npm --version
+			npm ci
+			npm run build
+			ls -al
+		  '''
             }
         }        
     }

@@ -5,7 +5,7 @@ pipeline {
 	  agent {
 	    docker
 	    	  {
-		  image "Node:apline"
+		  image "node:apline"
 		  reuseNode true
 		 }
 	      } 

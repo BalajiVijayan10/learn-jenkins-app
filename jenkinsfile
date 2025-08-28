@@ -20,6 +20,14 @@ pipeline {
 			ls -al
 		  '''
             }
-        }        
+        }  
+		 stage ('Test') {
+			steps {
+					sh '''
+					echo "Test"
+				'''git 	
+			}
+		 }
+
     }
 }

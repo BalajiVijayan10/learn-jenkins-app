@@ -22,10 +22,10 @@ pipeline {
             }
         }  
 		 stage ('Test') {
-			steps {
-					sh '''
-					echo "Test"
-				'''git 	
+		  steps {
+				  sh '''
+			echo Test
+			'''	
 			}
 		 }
 
